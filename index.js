@@ -15,7 +15,6 @@ var con = mysql.createConnection({
     database: "dbtodo"
 });
 
-
 app.get('/', (req,res) => {
     res.send(`
     <html>
@@ -28,7 +27,6 @@ app.get('/', (req,res) => {
     </html>`)
 })
 
-//insert to database
 app.post('/todo',(req,res)=> {  
     con.connect(function(err){
         const kata = req.body.deskripsi
@@ -41,10 +39,6 @@ app.get('/todo', (req ,res) => {
     con.connect(function(err) {     
         var data ="" 
         con.query("SELECT * FROM tabel_todo", function (err, result) {
-            // result.forEach((item) => {
-            //     data += `<div>` + item.deskripsi + `</div>`
-            // }); 
-            // res.send(data)
             res.json(result)
             res.end()
         });
