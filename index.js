@@ -12,6 +12,7 @@ app.use(cors())
 app.use('/todo', auth, routerTodo)
 app.use('/user', routerUser)
 
+//s
 app.listen(3000,function() {
     console.log("server...")
 })

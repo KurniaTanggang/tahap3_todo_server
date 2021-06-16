@@ -15,7 +15,7 @@ var con = mysql.createConnection({
     database: "dbtodo"
 });
 
-
+//post
 app.post('/',(req,res)=> {  
     con.connect(function(err,result){
         const kata = req.body.deskripsi
