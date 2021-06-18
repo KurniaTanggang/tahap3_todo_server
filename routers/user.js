@@ -47,8 +47,7 @@ app.delete('/:id',auth, (req, res)=> {
         else {
             con.query('DELETE FROM tabel_users WHERE id = ?', [req.params.id])
         }
-    })   
-    // res.send('DELETE USER ID :  ' + req.params.id)            
+    })             
     res.end()
 })
  
